@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ProjectGuid>{CB736CD3-2055-467E-91CA-66B90695D222}</ProjectGuid>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyTitle>NetBike.Xml.Tests</AssemblyTitle>
+    <Company>NetBike</Company>
+    <Product>NetBike.Xml.Tests</Product>
+    <Copyright>Copyright © NetBike 2015</Copyright>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.6.1" />
+    <PackageReference Include="NetBike.XmlUnit" Version="0.3.0" />
+    <PackageReference Include="NetBike.XmlUnit.NUnitAdapter3" Version="0.3.0" />
+    <PackageReference Include="NUnit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NetBike.Xml\NetBike.Xml.csproj" />
+  </ItemGroup>
+</Project>
