@@ -1,4 +1,6 @@
-﻿namespace NetBike.Xml.Utilities
+﻿using Cysharp.Text;
+
+namespace NetBike.Xml.Utilities
 {
     using System;
     using System.Text;
@@ -11,14 +13,23 @@
     {
         public static string ToDateString(DateTime dateTime)
         {
-            var builder = new StringBuilder(9);
+            //mc++ var builder = new StringBuilder(9);
+            var builder = ZString.CreateStringBuilder();
 
+            /*
+            mc++
             builder
-                .Append4(dateTime.Year)
-                .Append('-')
-                .Append2(dateTime.Month)
-                .Append('-')
-                .Append2(dateTime.Day);
+                   .Append4(dateTime.Year)
+                   .Append('-')
+                   .Append2(dateTime.Month)
+                   .Append('-')
+                   .Append2(dateTime.Day);
+            */
+            builder.Append(dateTime.Year);
+            builder.Append('-');
+            builder.Append(dateTime.Month);
+            builder.Append('-');
+            builder.Append(dateTime.Day);
 
             return builder.ToString();
         }
