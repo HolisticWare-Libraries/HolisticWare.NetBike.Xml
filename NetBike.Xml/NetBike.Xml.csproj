@@ -2,6 +2,7 @@
   <PropertyGroup>
     <ProjectGuid>{6230AFC4-876E-48C0-B555-8BE94E15D4D7}</ProjectGuid>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <!--
     <AssemblyTitle>NetBike.Xml</AssemblyTitle>
     <Company>NetBike</Company>
     <Product>NetBike.Xml</Product>
@@ -17,9 +18,68 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>XML serializer serialization</PackageTags>
     <PackageId>NetBike.Xml</PackageId>
+    -->
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="System.Reflection.Emit" Version="4.7.0" />
     <PackageReference Include="System.Reflection.Emit.Lightweight" Version="4.7.0" />
+    <PackageReference Include="ZString" Version="2.6.0" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <PackageId>HolisticWare.NetBike.Xml</PackageId>
+    <PackOnBuild>true</PackOnBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <IsPackable>true</IsPackable>
+
+    <Owners>HolisticWare, moljac</Owners>
+    <Authors>HolisticWare, moljac</Authors>
+    <Copyright>2024</Copyright>
+    <Description>
+      Package with some improvements for NetBike.Xml.
+      
+      Fast, flexible and high customizable XML serializer for converting between .NET objects and XML.
+    </Description>
+    <ProjectUrl>
+      https://github.com/HolisticWare-Libraries/HolisticWare.NetBike.Xml
+    </ProjectUrl>
+    <PackageProjectUrl>
+      https://github.com/HolisticWare-Libraries/HolisticWare.NetBike.Xml
+    </PackageProjectUrl>
+    <RepositoryUrl>
+      https://github.com/HolisticWare-Libraries/HolisticWare.NetBike.Xml
+    </RepositoryUrl>
+    <iconUrl>
+      https://secure.gravatar.com/avatar/b662959e712466f393541935b664d3c5
+    </iconUrl>
+    <PackageIconUrl>
+      https://secure.gravatar.com/avatar/b662959e712466f393541935b664d3c5
+    </PackageIconUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <license>LICENSE</license>
+    <licenseUrl>
+      https://github.com/HolisticWare-Libraries/HolisticWare.NetBike.Xml/main/LICENSE
+    </licenseUrl>
+    <PackageLicenseUrl>
+      https://github.com/HolisticWare-Libraries/HolisticWare.NetBike.Xml/main/LICENSE
+    </PackageLicenseUrl>
+    <VersionPrefix>0.0.1</VersionPrefix>
+    <!--
+    VersionSuffix - For debugging and local nuget feed
+    -->
+    <VersionSuffix>alpha-$([System.DateTime]::Now.ToString('yyyyMMddHHmm'))</VersionSuffix>
+    <PackageVersion>$(Version)</PackageVersion>
+
+    <!--
+    put the package output into a nuget test folder
+    -->
+    <PackageOutputPath>../output</PackageOutputPath>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md"            Pack="true" PackagePath="\"/>
+    <None Include="..\.github\README.md"    Pack="true" PackagePath="\.github"/>
   </ItemGroup>
 </Project>
